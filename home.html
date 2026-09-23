@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Beranda – Inas Lathifah</title>
     <meta name="description"
         content="Portfolio Inas Lathifah, lulusan Teknik Informatika yang bekerja di web development, mobile, dan UI/UX design.">
     <link rel="icon" href="image/apple-touch-icon.png" type="image/png">
@@ -14,13 +14,15 @@
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <a rel="icon" href="image/apple-touch-icon.png" type="image/png">
 </head>
 
 <body>
     <header id="header">
         <div class="nav-container">
-            <img src="image/apple-touch-icon.png" alt="logo-portfolio" width="50">
+            <a href="home.html" class="brand">
+                <img src="image/apple-touch-icon.png" alt="Logo Inas Lathifah" class="brand-logo">
+                Inas Lathifah
+            </a>
 
             <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="navbar"
                 aria-label="Buka menu navigasi">
@@ -30,7 +32,7 @@
             </button>
 
             <nav id="navbar" class="navbar">
-                <a href="home.html">Beranda</a>
+                <a href="home.html" aria-current="page">Beranda</a>
                 <a href="ability.html">Keahlian</a>
                 <a href="about.html">Tentang</a>
                 <a href="projects.html">Proyek</a>
@@ -54,7 +56,7 @@
                 </div>
             </div>
             <div class="hero-media">
-                <img src="image/profile.png" alt="Inas Lathifah" class="hero-photo">
+                <img src="image/profile.png" alt="Foto profil Inas Lathifah" class="hero-photo">
             </div>
         </div>
     </section>

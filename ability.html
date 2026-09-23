@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Keahlian – Inas Lathifah</title>
     <meta name="description"
         content="Portfolio Inas Lathifah, lulusan Teknik Informatika yang bekerja di web development, mobile, dan UI/UX design.">
     <link rel="icon" href="image/apple-touch-icon.png" type="image/png">
@@ -14,13 +14,15 @@
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
     <header id="header">
         <div class="nav-container">
-            <a href="home.html" class="brand">Inas Lathifah</a>
+            <a href="home.html" class="brand">
+                <img src="image/apple-touch-icon.png" alt="Logo Inas Lathifah" class="brand-logo">
+                Inas Lathifah
+            </a>
 
             <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="navbar"
                 aria-label="Buka menu navigasi">
@@ -31,14 +33,14 @@
 
             <nav id="navbar" class="navbar">
                 <a href="home.html">Beranda</a>
-                <a href="ability.html">Keahlian</a>
+                <a href="ability.html" aria-current="page">Keahlian</a>
                 <a href="about.html">Tentang</a>
                 <a href="projects.html">Proyek</a>
                 <a href="contact.html">Kontak</a>
             </nav>
         </div>
     </header>
-    
+
     <!-- Ability -->
     <section id="ability" class="section">
         <div class="container">
@@ -83,6 +85,29 @@
             </div>
         </div>
     </section>
+
+    <footer id="footer">
+        <p>&copy; 2026 Inas Lathifah. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navbar.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.classList.toggle('is-open', isOpen);
+        });
+
+        navbar.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.classList.remove('is-open');
+            });
+        });
+    </script>
 </body>
 
 </html>

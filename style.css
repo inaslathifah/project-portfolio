@@ -2,10 +2,10 @@
   --bg: #fbf3e7;
   --surface: #fffcf6;
   --ink: #2e2410;
-  --ink-soft: black;
+  --ink-soft: #7a6a49;
   --line: #ead9b7;
   --bisque: #ffe4c4;
-  --goldenrod: white;
+  --goldenrod: #b8860b;
   --goldenrod-deep: #8b6508;
   --radius: 10px;
   --font-display: "Space Grotesk", "Segoe UI", sans-serif;
@@ -19,14 +19,26 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 76px;
+  height: 100%;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.6;
+}
+
+/* Every page has exactly one content section as a sibling of the
+   fixed header and the footer; letting it grow keeps the footer
+   pinned to the bottom even on short pages like About or Ability. */
+body > .hero,
+body > .section {
+  flex: 1 0 auto;
 }
 
 a {
@@ -66,7 +78,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(251, 243, 231, 0.9);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   z-index: 100;
@@ -82,11 +94,22 @@ p {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
   color: var(--ink);
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .navbar {
@@ -104,6 +127,11 @@ p {
 
 .navbar a:hover {
   color: var(--goldenrod);
+}
+
+.navbar a[aria-current="page"] {
+  color: var(--goldenrod-deep);
+  font-weight: 600;
 }
 
 .nav-toggle {
@@ -149,7 +177,7 @@ p {
       rgba(184, 134, 11, 0.88) 0%,
       rgba(255, 228, 196, 0.55) 100%
     ),
-    url("hero-bg.jpg");
+    url("image/hero-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -215,10 +243,10 @@ p {
   width: 100%;
   max-width: 260px;
   aspect-ratio: 4 / 5;
-  border-radius: 150px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: center 12%;
-  border: 1px solid #fff8ec;
+  border: 6px solid #fff8ec;
   filter: drop-shadow(0 12px 24px rgba(46, 36, 16, 0.35));
 }
 
@@ -368,6 +396,21 @@ p {
   max-width: none;
 }
 
+.project-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+}
+
+.project-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Contact form */
 .contact-form {
   max-width: 560px;
@@ -409,10 +452,13 @@ p {
 
 /* Footer */
 #footer {
-  padding: 10px;
+  margin-top: auto;
+  padding: 28px 24px;
   width: 100%;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
   font-size: 0.85rem;
 }
 
