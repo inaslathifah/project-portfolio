@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <meta name="description"
+        content="Portfolio Inas Lathifah, lulusan Teknik Informatika yang bekerja di web development, mobile, dan UI/UX design.">
+    <link rel="icon" href="image/apple-touch-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <a rel="icon" href="image/apple-touch-icon.png" type="image/png">
+</head>
+
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <img src="image/apple-touch-icon.png" alt="logo-portfolio" width="50">
+
+            <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="navbar"
+                aria-label="Buka menu navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navbar" class="navbar">
+                <a href="home.html">Beranda</a>
+                <a href="ability.html">Keahlian</a>
+                <a href="about.html">Tentang</a>
+                <a href="projects.html">Proyek</a>
+                <a href="contact.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-kicker">Web · Mobile · UI/UX</p>
+                <h1>Halo, saya Inas Lathifah.</h1>
+                <p class="hero-lead">Sarjana Teknik Informatika yang bergerak di antara tiga hal: merancang
+                    antarmuka di Figma, membangun produknya dengan React dan Laravel, lalu memastikan semuanya
+                    berjalan stabil setelah rilis.</p>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">Lihat Proyek</a>
+                    <a href="contact.html" class="btn btn-secondary">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="image/profile.png" alt="Inas Lathifah" class="hero-photo">
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2026 Inas Lathifah. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navbar.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.classList.toggle('is-open', isOpen);
+        });
+
+        navbar.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.classList.remove('is-open');
+            });
+        });
+    </script>
+</body>
+
+</html>

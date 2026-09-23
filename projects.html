@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <meta name="description"
+        content="Portfolio Inas Lathifah, lulusan Teknik Informatika yang bekerja di web development, mobile, dan UI/UX design.">
+    <link rel="icon" href="image/apple-touch-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="home.html" class="brand">Inas Lathifah</a>
+
+            <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="navbar"
+                aria-label="Buka menu navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navbar" class="navbar">
+                <a href="home.html">Beranda</a>
+                <a href="ability.html">Keahlian</a>
+                <a href="about.html">Tentang</a>
+                <a href="projects.html">Proyek</a>
+                <a href="contact.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Proyek</h2>
+            <p class="section-lead">Dua proyek tim yang saya kerjakan dari sisi UI/UX hingga integrasi desain
+                ke frontend.</p>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <img src="image/image2.png" alt="Logo Parkify" class="project-logo">
+                    <div class="project-body">
+                        <h3>Parkify</h3>
+                        <p>Berkolaborasi dengan tim Front-End dan Back-End untuk mengembangkan Parkify, aplikasi
+                            yang menjadi satu-satunya platform yang bekerja sama dengan penyedia layanan parkir
+                            di berbagai lokasi seperti gedung, kawasan komersial, dan pusat perbelanjaan. Saya
+                            berkontribusi dalam merancang UI menggunakan Figma, membuat logo Parkify, dan
+                            melakukan UI slicing.</p>
+                        <ul class="tag-list tag-list-small">
+                            <li>React.ts</li>
+                            <li>Tailwind CSS</li>
+                            <li>Vite</li>
+                            <li>Shadcn/UI</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="image/image.png" alt="Logo PetPal" class="project-logo">
+                    <div class="project-body">
+                        <h3>PetPal</h3>
+                        <p>Tim kami, terdiri dari anggota Front-End dan Back-End, berkolaborasi mengembangkan
+                            PetPal, platform khusus untuk kebutuhan hewan peliharaan. Aplikasi ini menghadirkan
+                            berbagai fitur yang memudahkan pemilik hewan peliharaan membeli kebutuhan hewan dan
+                            berkonsultasi dengan dokter hewan, baik secara online maupun kunjungan langsung.
+                            Sebagai project leader, saya bertanggung jawab merancang UI di Figma, membuat logo
+                            PetPal, melakukan UI slicing, dan mengintegrasikan desain ke frontend.</p>
+                        <ul class="tag-list tag-list-small">
+                            <li>React.ts</li>
+                            <li>Tailwind CSS</li>
+                            <li>Vite</li>
+                            <li>Shadcn/UI</li>
+                            <li>Leaflet</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="project-body">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/rJKCamLjTDA?si=rHp_TdItGY6zI23Y">
+                        </iframe>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
